@@ -1,0 +1,8 @@
+.control{
+   
+    display:flex;
+    flex-direction: column-reverse;
+}
+.less{
+    right: 0;
+}

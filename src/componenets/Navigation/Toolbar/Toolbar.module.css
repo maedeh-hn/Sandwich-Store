@@ -1,0 +1,32 @@
+.Toolbar{
+    height:45px;
+    width: 100%;
+   
+    right: 0;
+
+    background: rgb(198, 114, 60);
+    display: flex;
+    justify-content: space-between;
+   
+   align-items: center;
+   box-sizing: border-box;
+   z-index: 90;
+   color: aliceblue;
+}
+
+.Toolbar div{
+    height: 50px;
+    align-items: center;
+    
+}
+@media (max-width:499px){
+    .DesktopOnly{
+     display: none;
+    }
+   
+}
+@media(min-width:500px){
+    .mobileOnly{
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+.header{
+    
+    background:#c6c5ca;
+    overflow: hidden;
+}
+.header img{
+    height: 200px;
+    width: auto;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
