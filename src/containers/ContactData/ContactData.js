@@ -4,6 +4,7 @@ import Button from '../../componenets/Ui/Button/Button'
 import axios from '../../axios-orders/axios-orders';
 import Spinner from '../../componenets/Ui/Spinner/Spinner';
 import Input from '../../componenets/Ui/Input/Input';
+import { connect } from 'react-redux';
 
 class ContactData extends Component{
 state={
@@ -84,8 +85,8 @@ orderHandler=()=>{
         
     }
     const order={
-        ingredient:this.props.ingredient,
-        price:this.props.price,
+        ingredient:this.props.ing,
+        price:this.props.totalPrice,
         customer:formData
     }
     axios.post('/orders.json',order)
@@ -179,5 +180,11 @@ inputChangedHandler=(event,inputKey)=>{
             )
     }
 }
+const mapStateToProps=state=>{
+    return{
+        ing:state.ingredient,
+        totalPrice: state.totalPrice
+    }
+}
 
-export default ContactData;
+export default connect(mapStateToProps) (ContactData);
