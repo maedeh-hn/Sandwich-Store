@@ -24,7 +24,7 @@ const Input=(props)=>{
         break;
         default:
         inputElement=<input className="form-control"  {...props.elementConfig} value={props.value} onChange={props.changed}/>
-        
+
     }
 
 

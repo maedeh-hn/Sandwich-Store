@@ -110,14 +110,14 @@ inputChangedHandler=(event,inputKey)=>{
    }
    updatedFormElement.value=event.target.value;
    updatedFormElement.valid=this.checkValidity(updatedFormElement.value,updatedFormElement.validation)
-   console.log(updatedFormElement.valid);
+//    console.log(updatedFormElement.valid);
    updatedOrderForm[inputKey]=updatedFormElement;
    updatedFormElement.touched=true
    let formIsValid=true
    for(let key in updatedOrderForm){
        formIsValid=updatedOrderForm[key].valid && formIsValid
    }
-   console.log(formIsValid);
+//    console.log(formIsValid);
    this.setState({orderForm:updatedOrderForm , formIsValid:formIsValid})
     }
     checkValidity(value,rules){

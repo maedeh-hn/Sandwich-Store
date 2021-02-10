@@ -1,13 +1,13 @@
 import classes from './NavigationItems.module.css'
 import React from 'react'
+import NavigationItem from './NavigationItem/NavigationItem'
 
 const NavigationItems=(props)=>(
-    <div className={classes.NavigationItems}>
-        <ul >
-        <li ><a href='/' className={classes.active}>صفحه اصلی</a></li>
-        <li><a href='/'>پرداخت</a></li>
+    <ul className={classes.NavigationItems}>
+        <NavigationItem link='/' exact>ثبت سفارش</NavigationItem>
+        <NavigationItem link='/checkout'>پرداخت</NavigationItem>
+        <NavigationItem link='/authentication'>ورود</NavigationItem>
     </ul>
-    </div>
     
 )
 
