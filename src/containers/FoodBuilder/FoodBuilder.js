@@ -9,7 +9,7 @@ import axios from '../../../src/axios-orders/axios-orders'
 import Spinner from '../../componenets/Ui/Spinner/Spinner'
 import WithErrorHandler from '../../hoc/WithErrorHandler/WithErrorHandler'
 import {connect} from 'react-redux'
-import * as actionTypes from '../../store/action'
+import * as burgerBuilderActions from '../../store/actions/index'
 
 
 
@@ -67,6 +67,8 @@ class FoodBuilder extends Component{
     
       
       componentDidMount(){
+          console.log("mount")
+          this.props.onInitIngredients()
     //     axios.get('ingredient.json').then(response=>{
     //         this.setState({ingredient:response.data})
     //     }
@@ -143,8 +145,9 @@ const mapStateToProps=state=>{
 }
 const mapDispatchToProps= dispatch=>{
     return{
-        onIngredientAdded: (ingName) => dispatch({type:actionTypes.ADD_INGREDIENT, ingredientName:ingName}),
-        onIngredientRemoved:(ingName) => dispatch({type:actionTypes.REMOVE_INGREDIENT, ingredientName:ingName})
+        onIngredientAdded: (ingName) => dispatch(burgerBuilderActions.addIngredient(ingName)),
+        onIngredientRemoved:(ingName) => dispatch(burgerBuilderActions.removeIngredient(ingName)),
+        onInitIngredients:()=>dispatch(burgerBuilderActions.initIngredient())
     }
 }
 
