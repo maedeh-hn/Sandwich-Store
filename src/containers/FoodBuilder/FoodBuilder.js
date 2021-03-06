@@ -139,8 +139,8 @@ const disabledInfo = {
 }
 const mapStateToProps=state=>{
     return{
-        ing:state.ingredient,
-        totalPrice: state.totalPrice
+        ing:state.burgerBuilder.ingredient,
+        totalPrice: state.burgerBuilder.totalPrice
     }
 }
 const mapDispatchToProps= dispatch=>{

@@ -47,7 +47,7 @@ render(){
 }
 const mapStateToProps=state=>{
     return{
-        ing:state.ingredient,
+        ing:state.burgerBuilder.ingredient,
        
     }
 }

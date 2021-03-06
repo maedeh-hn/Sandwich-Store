@@ -34,9 +34,10 @@ const reducer=(state=initialState , action)=>{
         case actionTypes.SET_INGREDIENTS:
             return {
                 ...state,
-                ingredient:action.ingredients
-                
+                ingredient:action.ingredients,
+                totalPrice: 0
             };
+            
         default:
             return state  
     }
